@@ -18,10 +18,10 @@ public class Hooks {
     }
     @After
     public void tearDown(Scenario scenario){
-//        if (scenario.isFailed()){
-//           // final  byte[] screenshot= ((TakesScreenshot)Driver.get()).getScreenschotsAs(OutputType.BYTES);
-//           // scenario.attach(screenshot,"image/png","screenshot");
-//        }
+        if(scenario.isFailed()){
+            final byte[] screenshot=((TakesScreenshot)Driver.get()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot,"image/png","screenshot");
+        }
         //System.out.println("\tThis is coming from After method");
         Driver.closeDriver();
     }
@@ -33,4 +33,5 @@ public class Hooks {
     public void tearDownDB(){
         //System.out.println("\tDisconnecting DB");
     }
+
 }

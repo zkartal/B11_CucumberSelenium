@@ -1,11 +1,14 @@
 package com.eurotech.pages;
+
+
 import com.eurotech.utilities.ConfigurationReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
+
     @FindBy(id = "rcc-confirm-button")
     public WebElement understandBtn;
     @FindBy(id = "loginpage-input-email")
@@ -84,4 +87,5 @@ public class LoginPage extends BasePage{
         userPasswordInput.sendKeys(password);
         submitBtn.click();
     }
+
 }

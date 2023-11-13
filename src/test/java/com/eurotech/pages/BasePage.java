@@ -33,5 +33,6 @@ public abstract class BasePage {
 
     public String getHeaderText(String headerName){
         //return Driver.get().findElement(By.xpath("//*[text()='"+headerName+"']")).getText();
-        return Driver.get().findElement(By.xpath("//section[@class='container']/*[text()='"+headerName+"']")).getText();}
+        return Driver.get().findElement(By.xpath("//section[@class='container']/*[text()='"+headerName+"']")).getText();
+    }
 }

@@ -8,13 +8,14 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class DashboardPage extends BasePage {
+
     @FindBy(id = "dashboard-h1")
     public WebElement dashboardText;
 
     @FindBy(id = "dashboard-p1")
     public WebElement welcomeText;
 
-    @FindBy(css = ".btn.btn-light") // #dashboard-edit-container>a
+    @FindBy(css = ".btn.btn-light") //#dashboard-edit-container>a
     public List<WebElement> dashboardEditList;
     @FindBy(xpath = "(//tbody)[1]/tr[1]/td[2]") //*[text()='Test Automation Engineer']
     public WebElement jobTitle;
@@ -33,4 +34,5 @@ public class DashboardPage extends BasePage {
     public String getTextCommon(String element){
         return Driver.get().findElement(By.xpath("//td[text()='"+element+"']")).getText();
     }
+
 }

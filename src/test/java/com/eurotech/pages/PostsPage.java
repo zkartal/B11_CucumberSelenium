@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 
 public class PostsPage extends BasePage{
+
     @FindBy(id = "post-form-title")
     public WebElement titleInput;
 
@@ -23,6 +24,5 @@ public class PostsPage extends BasePage{
         postInput.sendKeys(postText);
         submitBtn.click();
         Assert.assertEquals(postCreatedMsg.getText(),"Post Created","Verifying the post is created");
-
     }
 }

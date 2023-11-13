@@ -1,16 +1,12 @@
 package com.eurotech.stepDefinitions;
 
 import com.eurotech.pages.DashboardPage;
-import com.eurotech.pages.PostsPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-import java.util.List;
-
 public class NavigationMenu_StepDefs {
     DashboardPage dashboardPage = new DashboardPage();
-
     @Then("The user should be able to see welcome message")
     public void the_user_should_be_able_to_see_welcome_message() {
         System.out.println("I verified that welcome text is here");
@@ -51,6 +47,6 @@ public class NavigationMenu_StepDefs {
         System.out.println("header = " + header);
         String actualHeaderText= dashboardPage.getHeaderText(header);
         Assert.assertEquals("Verify that the header name is displayed",header,actualHeaderText);
-
     }
+
 }

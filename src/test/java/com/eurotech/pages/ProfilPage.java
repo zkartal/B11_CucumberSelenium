@@ -8,5 +8,4 @@ public class ProfilPage extends BasePage{
     public WebElement githubusername;
     @FindBy(linkText = "Go Back")
     public WebElement goBackBtn;
-
 }

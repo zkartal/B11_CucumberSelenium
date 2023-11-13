@@ -51,6 +51,4 @@ public class Login_StepDefs {
 
         Assert.assertTrue(dashboardPage.welcomeText.getText().contains(user));
     }
-
-
 }
