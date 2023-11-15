@@ -20,6 +20,10 @@ public class LoginPage extends BasePage {
     public WebElement submitBtn;
     @FindBy(xpath = "//*[contains(text(),'Invalid Credentials!')]")
     public WebElement warningMessage;
+    @FindBy(xpath = "//div[text()='Please include a valid email!']")
+    public WebElement invalidEmailMessage;
+    @FindBy(css = ".alert.alert-danger")
+    public WebElement generalWarningMessage;
 
     ////////////////////////////////////////////////////////////
 
@@ -86,6 +90,19 @@ public class LoginPage extends BasePage {
         userEmailInput.sendKeys(email);
         userPasswordInput.sendKeys(password);
         submitBtn.click();
+    }
+    public String getDisappearingWarningMessage(String message){
+        String actualMessage= null;
+
+        if (message.contains("@")){
+            actualMessage= userEmailInput.getAttribute("validationMessage");
+            System.out.println("actualMessage = " + actualMessage);
+        }else if (message.contains("valid")){
+            actualMessage= generalWarningMessage.getText();
+            System.out.println("actualMessage = " + actualMessage);
+        }
+
+        return actualMessage;
     }
 
 }
