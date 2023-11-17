@@ -21,24 +21,3 @@ Feature: Navigation Menu Task
     Then The user should be able to see welcome message
     When The user navigates to My Account Menu
     Then The user able to see Dashboard text
-
-          # -Write scenarios in navigationMenu.feature
-#-Create step definitions
-#-No need to use any JAVA code.
-#-Just implement the step definitions by adding print statement.
-#-Create new class NavigationMenuStepDefs
-
-# Scenario: Developer page test
-#Login as Developer
-#At first get the text of welcome
-#Then go to Developers menu and get the text of Developers
-#
-#Scenario: Posts page test
-#Login as Student
-#Get the text of welcome
-#Then go to All Posts menu and get the text of Posts
-#
-#Scenario: Dashboard page test
-#Login as Teacher
-#Get the text of welcome
-#Then go to My Account menu and get the text of Dashboard

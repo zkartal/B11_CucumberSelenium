@@ -19,17 +19,11 @@ Feature: Navigate to Menu with Parameters
     And The user navigates to "My Account" menu
     Then The user should be able to see header as "Dashboard"
 
-
-  Scenario: Student navigates to All Posts Menu
-    When The user logs in using "sdetb11@eurotech.study" and "Test1234"
-    Then The welcome message contains "sdetb11"
-    When The user navigates to "All Posts" menu
-    Then The user should be able to see header as "Posts"
-
-      # login as a teacher
+  # login as a teacher
   # verify welcome message
   # go to developer page
   # verify "Filter Profiles by Skill or by Location"
+
 
   Scenario: Teacher navigates to Developers Menu
     When The user logs in using "eurotech@gmail.com" and "Test12345!"
@@ -37,8 +31,8 @@ Feature: Navigate to Menu with Parameters
     When The user navigates to "Developers" menu
     Then The user should be able to see header as "Filter Profiles by Skill or by Location"
 
-
     # CLASS TASK--> Create navigate to menu with parameters feature test with scenario outline
+  @parallelExecution
   Scenario Outline: Different user navigates different menu
     When The user logs in using "<userType>" and "<password>"
     Then The welcome message contains "<name>"
@@ -49,29 +43,3 @@ Feature: Navigate to Menu with Parameters
       | eurotech@gmail.com     | Test12345! | Teacher    | All Posts  | Posts                                   |
       | jackbauer@gmail.com    | Admin123   | Jack Bauer | My Account | Dashboard                               |
       | sdetb11@eurotech.study | Test1234   | sdetb11    | Developers | Filter Profiles by Skill or by Location |
-
-
-
-     # HOMEWORK
-  #Create a new feature file named navigateMenuWithParameters.feature
-
-  # login as a teacher
-  # verify welcome message
-  # go to Post page
-  # verify "Posts"
-
-  # login as a teacher
-  # verify welcome message
-  # go to developer page
-  # verify "Filter Profiles by Skill or by Location"
-
-  # login as a student
-  # verify welcome message
-  # go to Post page
-  # verify "Post"
-
-  # login as a developer
-  # verify welcome message
-  # go to Dashboard page
-  # verify "Dashbo
-

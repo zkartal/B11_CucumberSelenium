@@ -11,7 +11,7 @@ Feature: Dashboard Page Menu
       | All Posts  |
       | My Account |
 
-
+  @parallelExecution
   Scenario: Log in as a specific user
     Given The user is on the login page
     When The user logs in using following credentials
@@ -20,7 +20,7 @@ Feature: Dashboard Page Menu
       | message   | Teacher            |
     And The user should be able to see following menu
       | Developers |
-      | All Posts  |
+      | All Posts1  |
       | My Account |
 
   Scenario: User should be able to see Dashboard Menu after log in

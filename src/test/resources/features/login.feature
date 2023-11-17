@@ -1,4 +1,4 @@
-@regression @login
+@regression @login @parallelExecution
 
 # @wip --> work in progress
 # ctrl + alt + L --> formats the page structure for windows
