@@ -12,7 +12,7 @@ Feature: Log in as different user
     Given The user is on the login page
     When The user logs in using "sdetb11@eurotech.study" and "Test1234"
     Then The user should be able to login
-    And The welcome message contains "sdetb112"
+    And The welcome message contains "sdetb11"
 
     # HOMEWORK
   #Create a new feature file named navigateMenuWithParameters.feature
